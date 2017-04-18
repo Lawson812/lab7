@@ -31,12 +31,16 @@ var groceryList = [
         price:11.99,
     }
 ];
-var total=0;
+var subtotal=0;
+
 groceryList.forEach(function(item){
-    total +=item.price;
+    subtotal +=item.price;
     console.log(item.name);
 });
+var tax= subtotal* 0.06;
+var total=subtotal + tax;
+console.log('Subtotal = '+ subtotal);
+console.log('Tax = '+ tax.toFixed(2));
 
-console.log('subtotal = '+ total);
-
-console.log('Total='+ total * 1.06); 
+console.log('Total = '+ total.toFixed(2)); 
+console.log('Thank you for shopping at Meijer!')
