@@ -35,12 +35,36 @@ var subtotal=0;
 
 groceryList.forEach(function(item){
     subtotal +=item.price;
-    console.log(item.name);
+//    console.log(item.name);
 });
 var tax= subtotal* 0.06;
 var total=subtotal + tax;
-console.log('Subtotal = '+ subtotal);
-console.log('Tax = '+ tax.toFixed(2));
 
-console.log('Total = '+ total.toFixed(2)); 
-console.log('Thank you for shopping at Meijer!')
+var heading = document.createElement('div');
+heading.className=('heading');
+document.body.appendChild(heading);
+
+var myFood = document.createElement('div');
+myFood.className=('myFood');
+document.body.appendChild(myFood);
+
+//var myPrice = document.createElement('div');
+//myPrice.className=('myPrice');
+//document.body.appendChild(myPrice);
+
+
+
+groceryList.forEach(function(item){
+    var itemName=document.createElement('ul');
+    itemName.innerText=item.name;
+    itemName.className=('itemName')
+    myFood.appendChild(itemName);
+});
+
+groceryList.forEach(function(item){
+    var itemPrice=document.createElement('ul');
+    itemPrice.innerText=item.price;
+    itemPrice.className=('itemPrice')
+    myFood.appendChild(itemPrice);
+});
+

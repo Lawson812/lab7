@@ -1,0 +1,15 @@
+.heading {
+    border:3px black solid;
+    background-color:darkolivegreen;
+    width:80%;
+    height:100px;
+    margin-left:10%;
+    margin-bottom:5%;
+}
+.myFood {
+    border:6px orange solid;
+    background-color:purple;
+}
+.itemPrice {
+    display:;
+}
