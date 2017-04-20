@@ -98,28 +98,33 @@ groceryList.forEach(function(item){
 });
 
 /*tax and total variables*/
-/*tax and total variables*/
 var tax= subtotal* 0.06;
 var total=subtotal + tax;
 
+/* subtotal text*/
 var line1 = document.createElement('p');
 line1.innerHTML ='Subtotal ';
 line1.className=('line1');
 myFood.appendChild(line1);
 
+/*Subtotal amount*/
 var itemSubtotal=document.createElement('p');
 itemSubtotal.innerHTML=subtotal;
 itemSubtotal.className=('subtotal');
 myFood.appendChild(itemSubtotal);
 
+
 var linebreak = document.createElement("br");
-myFood.appendChild(linebreak); 
+myFood.appendChild(linebreak);
+
+/*tax text*/
 
 var line2 = document.createElement('p');
 line2.innerHTML ='Tax ';
 line2.className=('line2');
 myFood.appendChild(line2);
                    
+/*tax amount*/
 
 var salesTax = document.createElement('p');
 salesTax.innerHTML=tax.toFixed(2);
@@ -130,12 +135,14 @@ myFood.appendChild(salesTax);
 var linebreak = document.createElement("br");
 myFood.appendChild(linebreak);
 
+/*total text*/
+
 var line3 = document.createElement('p');
 line3.innerHTML ='Total ';
 line3.className=('line3');
 myFood.appendChild(line3);
 
-
+/*total amount*/
 
 var finalTotal = document.createElement('p');
 finalTotal.innerHTML=total.toFixed(2);
