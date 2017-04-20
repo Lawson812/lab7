@@ -1,3 +1,9 @@
+@font-face{
+    font-family:receipt;
+    src:url(fakereceipt.ttf);
+}
+
+
 .heading {
     border:3px black solid;
     background-color:darkolivegreen;
@@ -8,7 +14,7 @@
 }
 .myFood {
     border:6px orange solid;
-    background-color:purple;
+    background-color:beige;
     text-align: center;
 }
 
@@ -16,14 +22,64 @@
     display:inline-block;
     list-style: none;
     text-align: left;
+    font-family:receipt;
+    font-size:120%;
+
 }
 
 .grocPrice{
     display:inline-block;
     text-align: left;
+    font-family:receipt;
+    font-size:120%;
 }
 .hr{
     width:35%;
-    color:black;
+    margin-left:34%;
+    border:2px black solid;
+
+}
+.line1{
+    font-family:receipt;
+    font-size:90%;
+    display:inline-block;
+    margin-left:4%;
+}
+.subtotal {
+    font-family:receipt;
+    font-size:90%;
+    display:inline-block;
+    margin-left:21%;
+}
+.line2{
+     font-family:receipt;
+    font-size:90%;
+    display:inline-block;
+    margin-left:5%;
 }
 
+
+.salesTax {
+     font-family:receipt;
+    font-size:90%;
+    display:inline-block;
+    margin-left:27%;
+}
+.line3{
+     font-family:receipt;
+    font-size:130%;
+    display:inline-block;
+    margin-left:5%;
+}
+
+.finalTotal{
+     font-family:receipt;
+    font-size:130%;
+    display:inline-block;
+    margin-left:25%;
+}
+.h1{
+    text-align:center;
+    font-family:receipt;
+    font-size: 210%;
+}
