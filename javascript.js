@@ -1,62 +1,81 @@
+/*list of groceries and prices inside of "groceryList" object. Subtotal variable defined*/
 var groceryList = [
     {
-        name:'wine',
+        name:'Wine',
         price:35.88,
     },{
-        name:'cheese',
+        name:'Cheese',
         price:2.19,
     },{
-        name:'eggs',
+        name:'Eggs',
         price:1.89,
     },{
-        name:'butter',
+        name:'Butter',
         price:1.29,
     },{
-        name:'bacon',
+        name:'Bacon',
         price:4.99,
     },{
-        name:'bread',
+        name:'Bread',
         price:2.39,
     },{
-        name:'rice',
+        name:'Rice',
         price:3.09,
     },{
-        name:'potatoes',
+        name:'Potatoes',
         price:2.79,
     },{
-        name:'water',
+        name:'Water',
         price:3.39,
     },{
-        name:'apples',
+        name:'Apples',
         price:11.99,
     }
 ];
 var subtotal=0;
-
+/*forEach loop to iteration and add prices from "groceryList" object*/
 groceryList.forEach(function(item){
     subtotal +=item.price;
-//    console.log(item.name);
 });
+
+/*tax and total variables*/
 var tax= subtotal* 0.06;
 var total=subtotal + tax;
+
+/*heading*/
 
 var heading = document.createElement('div');
 heading.className=('heading');
 document.body.appendChild(heading);
 
+/* shopping list body div*/
+
 var myFood = document.createElement('div');
 myFood.className=('myFood');
 document.body.appendChild(myFood);
+
+/*Items list*/
 
 var grocItems =
 document.createElement('ul');
 grocItems.className=('grocItems');
 myFood.appendChild(grocItems);
 
+/*price list*/
+
 var grocPrice=
 document.createElement('ul');
 grocPrice.className=('grocPrice');
 myFood.appendChild(grocPrice);
+
+/* hr Element*/
+
+var horizontalRule =
+document.createElement('hr');
+horizontalRule.className=('hr');
+myFood.appendChild(horizontalRule);
+
+/*grocery list from "groceryList" object*/
 
 groceryList.forEach(function(item){
     var itemName=document.createElement('li');
@@ -64,6 +83,8 @@ groceryList.forEach(function(item){
     itemName.className=('itemName')
     grocItems.appendChild(itemName);
 });
+
+/*grocery prices from "groceryList" object*/
 
 groceryList.forEach(function(item){
     var itemPrice=document.createElement('ul');

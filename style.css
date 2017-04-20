@@ -9,14 +9,21 @@
 .myFood {
     border:6px orange solid;
     background-color:purple;
-    
+    text-align: center;
 }
 
 .grocItems{
     display:inline-block;
     list-style: none;
+    text-align: left;
 }
 
 .grocPrice{
     display:inline-block;
+    text-align: left;
 }
+.hr{
+    width:35%;
+    color:black;
+}
+
