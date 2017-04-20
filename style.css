@@ -9,7 +9,14 @@
 .myFood {
     border:6px orange solid;
     background-color:purple;
+    
 }
-.itemPrice {
-    display:;
+
+.grocItems{
+    display:inline-block;
+    list-style: none;
+}
+
+.grocPrice{
+    display:inline-block;
 }

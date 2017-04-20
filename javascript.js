@@ -48,23 +48,27 @@ var myFood = document.createElement('div');
 myFood.className=('myFood');
 document.body.appendChild(myFood);
 
-//var myPrice = document.createElement('div');
-//myPrice.className=('myPrice');
-//document.body.appendChild(myPrice);
+var grocItems =
+document.createElement('ul');
+grocItems.className=('grocItems');
+myFood.appendChild(grocItems);
 
-
+var grocPrice=
+document.createElement('ul');
+grocPrice.className=('grocPrice');
+myFood.appendChild(grocPrice);
 
 groceryList.forEach(function(item){
-    var itemName=document.createElement('ul');
+    var itemName=document.createElement('li');
     itemName.innerText=item.name;
     itemName.className=('itemName')
-    myFood.appendChild(itemName);
+    grocItems.appendChild(itemName);
 });
 
 groceryList.forEach(function(item){
     var itemPrice=document.createElement('ul');
     itemPrice.innerText=item.price;
     itemPrice.className=('itemPrice')
-    myFood.appendChild(itemPrice);
+    grocPrice.appendChild(itemPrice);
 });
 
